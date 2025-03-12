@@ -1,0 +1,100 @@
+.apod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  color: rgb(180, 200, 220);
+}
+
+.Card {
+  margin: 5px;
+  background-color: transparent !important;
+  border-radius: 10px !important;
+  background-color: rgb(20, 30, 40);
+  border: 2px solid rgba(180, 200, 220, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.content-md,
+.content-xs {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 50%;
+  color: rgb(180, 200, 220);
+  background-color: rgb(20, 30, 40);
+  border-radius: 0 10px 10px 0;
+}
+.box-md,
+.box-xs {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.content-md {
+  width: 50%;
+}
+.content-xs {
+  width: 100%;
+}
+.box-md {
+  flex-direction: row;
+}
+.box-xs {
+  flex-direction: column;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.enlarged-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  cursor: default;
+}
+
+
+.image-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.apod-image {
+  max-height: 35em;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px 0 0 10px;
+  background-color: rgb(20, 30, 40);
+  cursor: pointer;
+}
+
+.fav-icon {
+  position: absolute !important;
+  bottom: 10px;
+  right: 10px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.fav-icon svg{
+  stroke: gold;
+  fill: transparent;
+}
+
+.fav-icon:hover svg {
+  fill: gold;
+}
+
+.fav-icon.active svg {
+  fill: gold;
+}

@@ -1,0 +1,19 @@
+#appBar{
+    background-color: rgb(20, 30, 40);
+    color: rgb(180, 200, 220);
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+#toolbar{
+    display:flex;
+}
+
+.navb {
+    transition: 0.2s ease-in-out;
+}
+
+.navb:hover {
+    color: white;
+    text-shadow: 0 0 10px rgba(180, 200, 220, 0.3);
+}

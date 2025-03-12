@@ -1,0 +1,38 @@
+.star {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.star svg {
+  stroke: gold;
+  fill: transparent;
+  transition: fill 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.star:hover svg {
+  fill: gold;
+  transform: rotate(360deg);
+}
+
+.static-star {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.static-star svg {
+  stroke: gold;
+  fill: transparent;
+  transition: fill 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.static-star:hover svg {
+  fill: gold;
+}
+.static-star .active svg {
+  fill: gold;
+}
+
+
+

@@ -1,0 +1,111 @@
+#mars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+#filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+
+#bigger-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  background-color: rgba(20, 30, 40, 0.7);
+  border-radius: 15px;
+}
+.form {
+  margin: 10px !important;
+  display: flex;
+  justify-content: center;
+  padding: 10px !important;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 7px;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+.mars-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 2;
+}
+
+#sol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  color: rgb(180, 200, 220) !important;
+}
+
+.MuiSwitch-thumb {
+  color: rgb(180, 200, 220) !important;
+}
+
+.MuiSwitch-track {
+  background-color: rgb(180, 200, 220) !important;
+}
+
+.fav-icon {
+  position: absolute !important;
+  right: 10px !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.fav-icon svg {
+  stroke: gold;
+  fill: transparent;
+}
+
+.fav-icon:hover svg {
+  fill: gold;
+}
+
+.fav-icon.active svg {
+  fill: gold;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.enlarged-image {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  border-radius: 10px;
+  cursor: default;
+}

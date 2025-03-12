@@ -1,0 +1,130 @@
+#epic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+#filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+.switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  color: rgba(20, 30, 40, 0.7) !important;
+}
+
+#form {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 7px;
+}
+
+#epic-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 2;
+}
+#epic-image-2 {
+  width: auto;
+  height: 60vh;
+  border-radius: 8px;
+  box-shadow: 2;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 10px;
+}
+.nav-button {
+  margin: 5px !important;
+  color: white !important;
+  background: none !important;
+}
+.nav-button:hover {
+  background: none !important;
+}
+
+.fav-icon {
+  position: absolute !important;
+  bottom: 10px;
+  right: 10px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.fav-icon svg {
+  stroke: gold;
+  fill: transparent;
+}
+
+.fav-icon:hover svg {
+  fill: gold;
+}
+
+.fav-icon.active svg {
+  fill: gold;
+}
+
+.fav-icon2 {
+  position: absolute !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.fav-icon2 svg {
+  stroke: gold;
+  fill: transparent;
+}
+
+.fav-icon2:hover svg {
+  fill: gold;
+}
+
+.fav-icon2.active svg {
+  fill: gold;
+}
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.enlarged-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  cursor: default;
+}
