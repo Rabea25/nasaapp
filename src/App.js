@@ -1,11 +1,11 @@
-import ApodPage from "./pages/ApodPage";
-import NeoPage from "./pages/NeoPage";
-import EpicPage from "./pages/EpicPage";
-import Home from "./pages/Home";
-import MarsRoverPage from "./pages/MarsRoverPage";
-import NavBar from "./components/NavBar";
-import SearchPage from "./pages/SearchPage";
-import FavouritesPage from './pages/FavouritesPage'
+import ApodPage from "./pages/ApodPage.js";
+import NeoPage from "./pages/NeoPage.js";
+import EpicPage from "./pages/EpicPage.js";
+import Home from "./pages/Home.js";
+import MarsRoverPage from "./pages/MarsRoverPage.js";
+import NavBar from "./components/NavBar.js";
+import SearchPage from "./pages/SearchPage.js";
+import FavouritesPage from './pages/FavouritesPage.js'
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css"
