@@ -60,8 +60,13 @@ export default function Home() {
             link="/epic"
           />
           <HomeCard
+            title="🔭 About This Project"
             icon={<Info />}
-            desc=""
+            desc={
+              <>
+                Discover space with real NASA data! 🌌 Explore APOD, asteroids, Mars rover images, and more. Stay curious! 🚀
+              </>
+            }
           />
           <HomeCard
             title="Favourites"

@@ -3,13 +3,14 @@ import Epic, {
   FetchDate,
 } from "../components/Epic";
 import PickADate from "../components/DatePicker";
+import CustomSelect from "../components/CustomSelect";
 import dayjs from "dayjs";
-import { Box, Select, MenuItem, FormControl, Switch, Typography} from "@mui/material";
+import { Box, FormControl, Switch, Typography, InputLabel} from "@mui/material";
 import "../styles/Epic.css";
 
 export default function EpicPage() {
   const [date, setDate] = useState(new Date().toISOString().split("T")[0]);
-  const [type, setType] = useState("natural");
+  const [type, setType] = useState("");
   const [dateList, setDateList] = useState([]);
   const [gridView, setGridView] = useState(true);
   const [animatedView, setAnimatedView] = useState(false);
@@ -50,6 +51,7 @@ export default function EpicPage() {
       case "enhanced":
         setDateList(enhancedDateList);
         break;
+      case "natural":
       default:
         setDateList(naturalDateList);
         break;
@@ -72,14 +74,17 @@ export default function EpicPage() {
       <Box id="header">
         <Box id="filters">
           <FormControl id="form" sx={{ minWidth: { xs: "150px", sm: "200px", md: "250px" } }}>
-            <Select
+          <CustomSelect
+              rv = "Select a type"
               value={type}
-              onChange={(e) => setType(e.target.value)}>
-              <MenuItem value={"aerosol"}>Aerosol</MenuItem>
-              <MenuItem value={"cloud"}>Cloud</MenuItem>
-              <MenuItem value={"enhanced"}>Enhanced</MenuItem>
-              <MenuItem value={"natural"}>Natural</MenuItem>
-            </Select>
+              onChange={(e) => setType(e.target.value)}
+              children = {[
+                { value: "natural", label: "Natural" },
+                { value: "cloud", label: "Cloud" },
+                { value: "aerosol", label: "Aerosol" },
+                { value: "enhanced", label: "Enhanced" },
+              ]}
+              />
           </FormControl>
           <PickADate
             date={date}
@@ -109,7 +114,7 @@ export default function EpicPage() {
           )}
         </Box>
       </Box>
-      <Epic date={date} type={type} gridView={gridView} animatedView={animatedView}/>
+      {(dateList.length>0 && date && type) && <Epic date={date} type={type} gridView={gridView} animatedView={animatedView}/>}
     </div>
   );
 }

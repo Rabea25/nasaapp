@@ -46,6 +46,7 @@ export default function Epic({ date, type, gridView, animatedView }) {
     setLoaded(false);
     setErr(null);
     setIdx(0);
+    setEpic(null);
     axios
       .get(`https://epic.gsfc.nasa.gov/api/${type}/date/${date}?api_key=${key}`)
       .then((response) => {
