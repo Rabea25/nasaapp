@@ -62,19 +62,6 @@ export default function FavouritesPage() {
           </Typography>
         </div>
       )}
-      <button
-        onClick={() =>
-          setFavourites([
-            ...favourites,
-            {
-              img: "https://apod.nasa.gov/apod/image/2503/QuadMoon_Minato_960.jpg",
-              info: "AAAAAAAAAAAAAAA",
-            },
-          ])
-        }
-      >
-        eesf
-      </button>
     </Box>
   );
 }
