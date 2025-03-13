@@ -72,7 +72,7 @@ export default function Epic({ date, type, gridView, animatedView }) {
       );
       setIsFav(newIsFav);
     }
-  }, [epic, favourites]);
+  }, [epic, favourites, date, type]);
 
   // animation timer
   useEffect(() => {
