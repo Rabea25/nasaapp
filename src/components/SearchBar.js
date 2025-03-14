@@ -43,18 +43,34 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+const StyledInputBase2 = styled(InputBase)(({ theme }) => ({
+  color: "inherit",
+  "& .MuiInputBase-input": {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      width: "50ch",
+    },
+  },
+}));
+
 export default function SearchBar() {
-  let searchq = ""
+  const [searchq, setSearchq] = React.useState("");
   const navigate = useNavigate();
   
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(searchq);
     navigate(`/search?q=${searchq}`);
+    setSearchq(""); // Clear the input field after submission
+
   }
 
   return (
-    <div>
+    <div id="search-bar">
       <form onSubmit={handleSubmit}>
         <Search>
           <SearchIconWrapper>
@@ -63,7 +79,38 @@ export default function SearchBar() {
           <StyledInputBase
             placeholder="Search across all APIs"
             inputProps={{ "aria-label": "search" }}
-            onChange={(e) => searchq = e.target.value}
+            onChange={(e) => setSearchq(e.target.value)}
+            value={searchq}
+          />
+        </Search>
+      </form>
+    </div>
+  );
+}
+
+
+export function BiggerSearchBar() {
+  const [searchq, setSearchq] = React.useState("");
+  const navigate = useNavigate();
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(searchq);
+    setSearchq(""); // Clear the input field after submission
+    navigate(`/search?q=${searchq}`);
+  }
+
+  return (
+    <div id="search-bar">
+      <form onSubmit={handleSubmit}>
+        <Search>
+          <SearchIconWrapper>
+            <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase2
+            placeholder="Search across all APIs"
+            inputProps={{ "aria-label": "search" }}
+            onChange={(e) => setSearchq(e.target.value)}
           />
         </Search>
       </form>
