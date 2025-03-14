@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# **NASA Explorer**
+A React-based web application that fetches and displays data from various NASA APIs. Users can explore Astronomy Picture of the Day (APOD), Mars Rover Photos, Near-Earth Objects (NEO), and Earth images from the EPIC camera. A search feature is also included to find NASA images and videos.  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## **🔗 Live Demo**  
+[**Visit the Deployed Website Here**](https://gleeful-frangipane-cba232.netlify.app)  
+## **📌 Features**  
+✅ **Astronomy Picture of the Day (APOD)** – View NASA’s daily space image with a description.  
+✅ **Mars Rover Photos** – Browse images taken by rovers on Mars. Filter by date, camera, and rover name.  
+✅ **Earth Polychromatic Imaging Camera (EPIC)** – See images of Earth captured from space.  
+✅ **Near-Earth Objects (NEO)** – Track asteroids near Earth with size, speed, and approach details.  
+✅ **Search NASA Image Library** – Find images from NASA’s archives.  
+✅ **Favorites** – Save your favorite images for later viewing.  
+✅ **Pagination & Filtering** – Navigate large datasets efficiently.  
+## **📸 Screenshots**  
+![Homepage](./screenshots/home.png)  
+![APOD Page](./screenshots/apod.png)  
+![NEO Page](./screenshots/neo.png)
+![Mars Page](./screenshots/mars.png)  
+![EPIC Page](./screenshots/epic.png)    
+![Search](./screenshots/search.png) 
+---
 
-## Available Scripts
+# **Setup & Installation**
+##  Clone repository
+```
+git clone https://github.com/Rabea25/nasaapp.git
+cd nasaapp
+```
 
-In the project directory, you can run:
+##  Install packages
+```
+npm i
+```
 
-### `npm start`
+##  Add API key
+Get Nasa API key from [here](https://api.nasa.gov/). <br>
+Create .env file in the root of your project and set it to:
+```
+REACT_APP_NASA_API_KEY=your_api_key_here
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Start server
+```
+npm start
+```
+or if you want the website to be accessible from YourIP:port, edit package.json
+```
+"scripts": {
+    "start": "react-scripts start",
+```
+to
+```
+"scripts": {
+    "start": "HOST=0.0.0.0 PORT=yourport react-scripts start",
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
