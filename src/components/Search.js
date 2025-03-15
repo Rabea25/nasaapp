@@ -66,7 +66,7 @@ export default function Search({ query }) {
   useEffect(() => {
     if (searchResults.length > 0) {
       const newIsFav = searchResults.map((item) =>
-        favourites.some((fav) => fav.img === item.links[0].href)
+        item.links ? favourites.some((fav) => fav.img === item.links[0].href) : false
       );
       setIsFav(newIsFav);
     }
