@@ -48,7 +48,7 @@ export default function Home() {
             icon={<PrecisionManufacturing />}
             desc="Explore Mars through rover-captured images."
             buttonText="View Mars Data"
-            link="/mars"
+            link="/marsrover"
           />
         </Box>
         <Box className="row">
